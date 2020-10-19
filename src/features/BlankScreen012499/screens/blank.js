@@ -23,14 +23,17 @@ export default class Blank extends React.Component {
     }
   }
 
-  state = { CheckBox_3: true, CheckBox_5: true, Switch_7: true }
+  state = {
+    CheckBox_3: true,
+    CheckBox_5: true,
+    Switch_7: true,
+    TextInput_8: ""
+  }
 
   render = () => (
     <View>
       <CheckBox
         title="Radio button"
-        checkedIcon="dot-circle-o"
-        uncheckedIcon="circle-o"
         checked={this.state.CheckBox_3}
         onPress={nextChecked => this.setState({ CheckBox_3: nextChecked })}
       />
@@ -40,10 +43,20 @@ export default class Blank extends React.Component {
         onPress={nextChecked => this.setState({ CheckBox_5: nextChecked })}
       />
       <Switch
-        trackColor={{ false: "#C0CCDA", true: "#409EFF" }}
         value={this.state.Switch_7}
         onValueChange={nextChecked => this.setState({ Switch_7: nextChecked })}
       />
+      <TextInput
+        placeholder="Sample text input placeholder tests tsets text inout inpuyjkjkjdddd dr "
+        value={this.state.TextInput_8}
+        onChangeText={nextValue => this.setState({ TextInput_8: nextValue })}
+      />
+      <Text>
+        Sample text content ssgsgjgteststest tsets tsets testtstsetsetstsets
+        sddtsrtsrs snbjshjhsjhjsm
+        smnjsnmsnmhksnmsnksnnsnsnsnkshskhkshkshkshkshkshkshskhshskskhskshksks
+        ssbjsjshjhjshjshjgjsy
+      </Text>
     </View>
   )
 }
@@ -53,8 +66,15 @@ const styles = StyleSheet.create({
     flex: 1,
     marginHorizontal: 16
   },
+
   View_1: {},
   CheckBox_3: {},
   CheckBox_5: {},
-  Switch_7: {}
+  Switch_7: {},
+  View_1: {},
+  CheckBox_3: {},
+  CheckBox_5: {},
+  Switch_7: {},
+  TextInput_8: {},
+  Text_10: {}
 })
